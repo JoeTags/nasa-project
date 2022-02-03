@@ -3,7 +3,7 @@ const app = require('../../app');
 const { 
   mongoConnect, 
   mongoDisconnect 
-} = require('../../services/mongo')
+} = require('../../services/mongo');
 
 const {
   loadPlanetsData,
@@ -12,6 +12,7 @@ const {
 describe('Launches API ', () => {
   beforeAll(async () => {
     await mongoConnect();
+    await loadPlanetsData();
   });
 
   afterAll(async () => {
